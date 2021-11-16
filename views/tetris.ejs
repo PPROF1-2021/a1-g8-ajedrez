@@ -1,0 +1,64 @@
+<html>
+<head>
+
+    <title>tetris</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="resources/css/estilos.css">
+    
+    <link rel="stylesheet" href="resources/recursos/css/plugins/font-awesome.css">
+
+</head>
+
+<body >
+  <li data-tooltip="Inicio" data-position="right-side" >
+    <a href="index.ejs" class="icon-h fas fa-house-damage" ></a>
+</li>
+    <div class="titulo">Tetris
+    
+</div>
+  <div class="body">
+      <div class="posicion derecha">
+        <canvas id="tetris" width="200" height="400"></canvas>
+      </div>
+      <div class="posicion">
+      <div class="caja_derecha">
+        
+            siguiente:
+        <canvas id="proxPieza" width="100" height="100"></canvas>
+      </div>
+      <div class="caja_derecha">
+                Puntos:
+        <div id="score"> </div>
+      </div>
+      <div class="caja_derecha">
+                Nivel:
+        <div id="level"> </div>
+      </div>
+      <div class="caja_derecha">
+                Linea:
+        <div id="linea">Linea: </div>
+      </div>  
+        <div class="btn_group">
+          <button onclick="pausa()" class="btn">Pausa</button>
+          <br>
+          
+          
+        </div>
+        
+
+      </div>
+      </div>
+      <script src="resources/js/tetris.js"></script>
+
+       
+
+
+<script src="resources/js/bootstrap.min.js"></script>
+    
+  </div>
+</div>
+</body>
+
+
+
+</html>
