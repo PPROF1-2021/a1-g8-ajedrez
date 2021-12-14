@@ -8,6 +8,7 @@ const canvasNext = document.getElementById("proxPieza");
 const context = canvas.getContext("2d");
 const ctxNext = canvasNext.getContext("2d");
 const grid = crearMatriz(10, 20);
+
 const colores = [
     null,
     '#FF0D72',
@@ -28,6 +29,7 @@ const jugador = {
     score: 0,
     level: 0,
     linea: 0,
+    
 };
 
 //10 filas y 20 columnas entonces divido 200 que es el ancho /20 = 10 columnas
@@ -236,6 +238,7 @@ function eliminar() {
         rowCount *= 2;
         if (jugador.linea % 3 === 0)
             jugador.level++;
+            
     }
 
 }
@@ -301,6 +304,7 @@ function playerReset() {
         jugador.score = 0;
         jugador.level = 0;
         jugador.linea = 0;
+        
         updateScore();
     }
 

@@ -67,4 +67,6 @@
       transition: 0.6s;
     background-position: right;
 }
-  
+  .date1{
+      text-align: right;
+  }

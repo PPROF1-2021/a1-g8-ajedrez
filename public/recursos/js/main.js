@@ -208,8 +208,8 @@ $(document).ready(function() {
             },
 
             messages: {
-                name: "Please enter your name",
-                email: "Please enter your email address"
+                name: "Porfavor ingrese su Nombre Completo",
+                email: "Porfavor ingrese su mail"
             },
 
             submitHandler: function (form) {
@@ -238,7 +238,7 @@ $(document).ready(function() {
 
         });
     }
-	
+  
 	/* -----------------------------------
 	      	5. Glitch Effect
 	----------------------------------- */

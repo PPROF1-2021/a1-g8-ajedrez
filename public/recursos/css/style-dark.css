@@ -1037,12 +1037,12 @@ blockquote span img {
 }
 
 .pt-about .info-icon {
-	padding-top: 45px
+	padding-top: 50px
 }
 
 .pt-about .info-icon i {
 	display: flex;
-	float: left;
+	float: center;
 	width: 45px;
 	height: 45px;
     align-items: center;
@@ -1125,7 +1125,7 @@ blockquote span img {
 
 /* Service Block */
 .pt-about .service {
-	text-align: center;
+	text-align: left;
 }
 
 .pt-about .service i {

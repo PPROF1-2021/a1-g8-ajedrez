@@ -10,8 +10,11 @@
 </head>
 
 <body >
+  <section id="date1" ></section>
+  <section id="minuto">0</section><section id="segundo">0</section>
+  
   <li data-tooltip="Inicio" data-position="right-side" >
-    <a href="index.ejs" class="icon-h fas fa-house-damage" ></a>
+    <a href="/" class="icon-h fas fa-house-damage" ></a>
 </li>
     <div class="titulo">Tetris
     
@@ -26,6 +29,10 @@
             siguiente:
         <canvas id="proxPieza" width="100" height="100"></canvas>
       </div>
+      <div class="caja_derecha">
+               tiempo:
+      
+        </div>
       <div class="caja_derecha">
                 Puntos:
         <div id="score"> </div>
@@ -51,7 +58,7 @@
       <script src="resources/js/tetris.js"></script>
 
        
-
+      <script src="resources/js/tiempo.js"></script>
 
 <script src="resources/js/bootstrap.min.js"></script>
     

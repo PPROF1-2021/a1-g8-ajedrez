@@ -1,7 +1,9 @@
 // 1 - Invocamos a Express
 const express = require('express');
 const app = express();
-const Swal = require('sweetalert2')
+
+
+
 
 //2 - Para poder capturar los datos del formulario (sin urlencoded nos devuelve "undefined")
 app.use(express.urlencoded({extended:false}));
@@ -45,7 +47,12 @@ const connection = require('./database/db');
 	app.get('/tetris',(req, res)=>{
 		res.render('tetris');
 	})
-
+	app.get('/sobremi',(req, res)=>{
+		res.render('sobremi');
+	})
+	app.get('/contacto',(req, res)=>{
+		res.render('contacto');
+	})
 //10 - Método para la REGISTRACIÓN
 app.post('/register', async (req, res)=>{
 	const user = req.body.user;
@@ -88,7 +95,7 @@ app.post('/auth', async (req, res)=> {
                         alertMessage: "USUARIO y/o PASSWORD incorrectas",
                         alertIcon:'error',
                         showConfirmButton: true,
-                        timer: false,
+                        timer: 7000,
                         ruta: 'login'    
                     });
 				
@@ -121,6 +128,7 @@ app.get('/', (req, res)=> {
 	if (req.session.loggedin) {
 		res.render('index',{
 			login: true,
+			hidden:false,
 			name: req.session.name			
 		});		
 	} else {

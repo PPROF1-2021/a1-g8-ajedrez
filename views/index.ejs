@@ -22,15 +22,16 @@
 		
 		<!-- CSS Base -->
         <link rel="stylesheet" class="back-color" href="resources/recursos/css/style-dark.css">
+		<link rel="stylesheet" class="back-color" href="resources/recursos/css/styles.css">
 	    <link rel="stylesheet" href="resources/recursos/css/style-demo.css">
-		
+		<link rel="stylesheet" href="resources/recursos/css/tiempo.css">
 	<!-- Settings Style -->
-	<link rel="stylesheet" class="posit-nav" href="resources/recursos/css/settings/left-nav.css" />
-	<link rel="stylesheet" class="theme-color" href="resources/recursos/css/settings/green-color.css" />
+	<link rel="stylesheet" class="posit-nav" href="resources/recursos/css/settings/left-nav.css">
+	<link rel="stylesheet" class="theme-color" href="resources/recursos/css/settings/green-color.css">
 		
     </head>
     <body>
-		
+		<section id="date1" class="date1" ></section>
   
 		<!-- PreCargado -->
 <div id="preloader">
@@ -66,26 +67,27 @@
           <ul>
                               
 		<li data-tooltip="Inicio" data-position="top">
-                <a href="login" class="icon-h fas fa-house-damage"></a>
+                <a href="#inicio" class="icon-h fas fa-house-damage"></a>
 					</li>
-		<li id="jugar" data-tooltip="Jugar" data-position="top">
+					
+		<li id="jugar" data-tooltip="Jugar" data-position="top" > 
                 <a href="tetris" class="icon-a fas fa-user-tie"></a>
                 
 					</li>
 				
-		<li data-tooltip="Ajustes" data-position="top">
-            	<a href="#portfolio" class="icon-p fas fa-briefcase"></a>
+		<li data-tooltip="Sobre Mi" data-position="top">
+            	<a href="sobremi" class="far fa-address-card"></a>
 					</li>
-		<li data-tooltip="Creditos" data-position="top">
-            	<button type="button" onclick="" name="sobeNosotros" class="icon-b fas fa-receipt"></button>
-					</li>
-                <li data-tooltip="Registrate" data-position="top">
-		<a href="register" class="icon-c fas fa-pencil-alt"></a>
-					</li>
+		
+        <li data-tooltip="Registrate" data-position="top">
+		        <a href="register" class="icon-c fas fa-pencil-alt"></a>			
+	   </li>
+
 		<li data-tooltip="Contactos" data-position="top">
-		<a href="#contact" class="icon-c fas fa-envelope"></a>
-					</li>
-                                 
+		        <a href="contacto" class="icon-c fas fa-envelope"></a>
+					
+	</li>
+            	</ul>                      
 				
     			
 			 </nav>
@@ -106,7 +108,8 @@
 							<b>Multi Mapas</b>
 
               <li data-tooltip="login" data-position="top">
-                <% if (login) { %>                
+                <% if (login) { %> 
+					               
                                           
                   <a href="logout" class="a-logout">Logout</a>
               <%} else { %>
@@ -122,8 +125,7 @@
       
 				</div>
 					
-					
-			
+		
 		
 		<!-- Login -->
 		<div class="contenedor" >
@@ -132,7 +134,51 @@
           </div>
 			  	</section>  
           	</div>
-			
+			  <div class="page pt-contact" data-simplebar>
+            	<section class="container">
+					
+					<!-- Section Title -->
+              		<div class="header-page mt-70 mob-mt">
+						<h2>Contactos</h2>
+    					<span></span>
+					</div>
+					
+					<!-- Form Start -->
+					<div class="row mt-100">
+						<div class="col-lg-12 col-sm-12">
+							<div class="contact-form ">
+                        		<form method="post" class="box contact-valid" id="contact-form">
+									<div class="row">
+                            			<div class="col-lg-6 col-sm-12">
+                                			<input type="text" name="name" id="name" class="form-control" placeholder="Name *">
+                            			</div>
+                            			<div class="col-lg-6 col-sm-12">
+                                			<input type="email" name="email" id="email" class="form-control" placeholder="Email *">
+                            			</div>
+                            			<div class="col-lg-12 col-sm-12">
+                                			<textarea class="form-control" name="note"  id="note" placeholder="Your Message"></textarea>
+                            			</div>
+                             			<div class="col-lg-12 col-sm-12 text-center">
+                                			<button type="submit" class="btn-st">Enviar Consulta</button>
+                                			<div id="loader">
+                                    			<i class="fas fa-sync"></i>
+                                			</div>
+                            			</div>
+										<div class="col-lg-12 col-sm-12">
+                            				<div class="error-messages">
+                                				<div id="success">
+													<i class="far fa-check-circle"></i>Gracias, su mensaje fue enviado.
+												</div>
+                                				<div id="error">
+													<i class="far fa-times-circle"></i>Ocurrio un error, pruebe mas tarde Gracias.
+												</div>
+											</div>
+                            			</div>
+									</div>
+                    			</form>
+                    		</div>
+						</div>
+					</div>
 			
 			
         </div>
@@ -142,9 +188,9 @@
 		</div>
 		
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-
 		<!-- All Script -->
-    <script src="resources/public/js/alert2.js"></script>
+		<script src="resources/js/tiempo.js"></script>
+    <script src="resources/js/alert2.js"></script>
 		<script src="resources/recursos/js/jquery.min.js"></script>
 		<script src="resources/js/isotope.pkgd.min.js"></script>
 		<script src="resources/js/bootstrap.min.js"></script>
